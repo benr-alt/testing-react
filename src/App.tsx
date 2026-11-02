@@ -7,6 +7,7 @@ import useThrottle from './helpers/hooks/use-throttle'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [fakeClicks, setFakeClicks] = useState(0)
   const throttledSetCount = useThrottle(setCount, {throttleTime: 2000})
 
   return (
@@ -29,6 +30,13 @@ function App() {
           onClick={() => throttledSetCount((count) => count + 1)}
         >
           Count is {count}
+        </button>
+        <button
+          type="button"
+          className="fake-button"
+          onClick={() => setFakeClicks((n) => n + 1)}
+        >
+          Fake button clicked {fakeClicks}
         </button>
       </section>
 
