@@ -30,6 +30,9 @@ function App() {
         >
           Count is {count}
         </button>
+        <button type="button" className="fake-button">
+          Fake button
+        </button>
       </section>
 
       <div className="ticks"></div>
